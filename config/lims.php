@@ -11,7 +11,7 @@ return [
     | Эти данные попадают во фронтенд (окно входа, шапки) и в PDF-паспорт качества.
     */
     'plant' => [
-        'code'       => env('LIMS_PLANT_CODE', 'GMZ-5'),
+        'code'       => env('LIMS_PLANT_CODE', 'GMZ-3'),
         'name'       => [
             'ru' => env('LIMS_PLANT_NAME_RU', '5-й гидрометаллургический завод'),
             'uz' => env('LIMS_PLANT_NAME_UZ', '5-Gidrometallurgiya zavodi'),
