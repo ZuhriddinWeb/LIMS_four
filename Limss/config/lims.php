@@ -13,9 +13,9 @@ return [
     'plant' => [
         'code'       => env('LIMS_PLANT_CODE', 'GMZ-3'),
         'name'       => [
-            'ru' => env('LIMS_PLANT_NAME_RU', '5-й гидрометаллургический завод'),
-            'uz' => env('LIMS_PLANT_NAME_UZ', '5-Gidrometallurgiya zavodi'),
-            'en' => env('LIMS_PLANT_NAME_EN', '5th Hydrometallurgical Plant'),
+            'ru' => env('LIMS_PLANT_NAME_RU', '3-й гидрометаллургический завод'),
+            'uz' => env('LIMS_PLANT_NAME_UZ', '3-Gidrometallurgiya zavodi'),
+            'en' => env('LIMS_PLANT_NAME_EN', '3th Hydrometallurgical Plant'),
         ],
         'company'    => [
             'ru' => env('LIMS_COMPANY_RU', 'АО «Навоийский горно-металлургический комбинат»'),
