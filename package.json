@@ -1,0 +1,67 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.6",
+        "@vitejs/plugin-vue": "^5.2.3",
+        "autoprefixer": "^10.4.19",
+        "axios": "^1.7.2",
+        "bootstrap": "^5.2.3",
+        "laravel-echo": "^1.16.1",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.4.38",
+        "pusher-js": "^8.4.0-rc2",
+        "sass": "^1.56.1",
+        "tailwindcss": "^3.4.4",
+        "vite": "^6.2.3",
+        "vue": "^3.2.37"
+    },
+    "dependencies": {
+        "@handsontable/vue3": "^16.0.1",
+        "@jspreadsheet/vue": "^11.23.6",
+        "@syncfusion/ej2-vue-spreadsheet": "^31.1.17",
+        "@vuestic/tailwind": "^0.1.5",
+        "ag-grid-vue3": "^31.3.2",
+        "animejs": "^3.2.2",
+        "chart.js": "^4.4.9",
+        "date-fns": "^3.6.0",
+        "devextreme": "^24.1.7",
+        "devextreme-vue": "^24.1.7",
+        "exceljs": "^4.4.0",
+        "file-saver": "^2.0.5",
+        "handsontable": "^16.0.1",
+        "highcharts": "^12.2.0",
+        "highcharts-vue": "^2.0.1",
+        "html2pdf.js": "^0.10.3",
+        "jquery": "^3.7.1",
+        "jquery-mousewheel": "^3.2.2",
+        "jspreadsheet": "^8.7.13",
+        "jspreadsheet-ce": "^4.15.0",
+        "luckysheet": "^2.1.13",
+        "material-icons": "^1.13.12",
+        "material-symbols": "^0.25.3",
+        "sweetalert2": "^11.6.13",
+        "uuid": "^10.0.0",
+        "v-mask": "^2.3.0",
+        "vue-animejs": "^2.1.1",
+        "vue-chartjs": "^5.3.1",
+        "vue-i18n": "^9.13.1",
+        "vue-input-mask": "^0.0.11",
+        "vue-router": "^4.4.0",
+        "vue-shift-calendar": "^1.0.3",
+        "vue-the-mask": "^0.11.1",
+        "vue3-excel-editor": "^1.0.60",
+        "vuestic-ui": "^1.9.12",
+        "vuex": "^4.0.2",
+        "xlsx": "^0.18.5",
+        "xlsx-js-style": "^1.2.0"
+    },
+    "overrides": {
+        "luckysheet": {
+            "jquery": "3.7.1"
+        }
+    }
+}

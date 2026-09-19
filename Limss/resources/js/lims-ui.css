@@ -1,0 +1,111 @@
+/* ============================================================
+   LIMS UI — общий дизайн-слой (премиальный, тема-адаптивный)
+   Светлая тема по :root, тёмная — под html.dark-theme.
+   ============================================================ */
+:root {
+  --lims-bg: #eef2f8;
+  --lims-bg-glow1: rgba(21, 78, 193, 0.08);
+  --lims-bg-glow2: rgba(56, 189, 248, 0.08);
+  --lims-card: #ffffff;
+  --lims-card2: #f8fafc;
+  --lims-line: #e3e8f0;
+  --lims-text: #1e293b;
+  --lims-muted: #64748b;
+  --lims-accent: #2563eb;
+  --lims-accent2: #06b6d4;
+  --lims-shadow: 0 10px 30px -20px rgba(15, 23, 42, 0.35);
+}
+html.dark-theme {
+  --lims-bg: #0b1220;
+  --lims-bg-glow1: rgba(34, 211, 238, 0.10);
+  --lims-bg-glow2: rgba(96, 165, 250, 0.10);
+  --lims-card: #131c2e;
+  --lims-card2: #172236;
+  --lims-line: #24304a;
+  --lims-text: #e6edf7;
+  --lims-muted: #93a1b8;
+  --lims-accent: #22d3ee;
+  --lims-accent2: #60a5fa;
+  --lims-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.7);
+}
+
+.lims-page {
+  min-height: 100%;
+  padding: 82px 22px 40px;
+  color: var(--lims-text);
+  background:
+    radial-gradient(900px 500px at 12% -12%, var(--lims-bg-glow1), transparent 60%),
+    radial-gradient(800px 500px at 100% 0%, var(--lims-bg-glow2), transparent 55%),
+    var(--lims-bg);
+}
+
+.lims-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.lims-title { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+html.dark-theme .lims-title { background: linear-gradient(90deg, #e6edf7, #7dd3fc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.lims-sub { margin: 2px 0 0; color: var(--lims-muted); font-size: 0.82rem; }
+
+.lims-toolbar {
+  display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap;
+  padding: 12px 14px; margin-bottom: 16px;
+  background: var(--lims-card); border: 1px solid var(--lims-line);
+  border-radius: 14px; box-shadow: var(--lims-shadow);
+}
+
+.lims-panel {
+  background: linear-gradient(180deg, var(--lims-card2), var(--lims-card));
+  border: 1px solid var(--lims-line); border-radius: 16px; padding: 4px;
+  box-shadow: var(--lims-shadow); overflow: hidden;
+}
+.lims-panel-pad { padding: 16px; }
+
+.lims-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+.lims-table thead th {
+  text-align: left; color: var(--lims-muted); font-weight: 600; font-size: 0.78rem;
+  text-transform: uppercase; letter-spacing: 0.03em; padding: 12px 12px;
+  border-bottom: 1px solid var(--lims-line); background: var(--lims-card2);
+}
+.lims-table tbody td { padding: 11px 12px; border-bottom: 1px solid var(--lims-line); color: var(--lims-text); }
+.lims-table tbody tr:last-child td { border-bottom: none; }
+.lims-table tbody tr { transition: background-color 0.15s; }
+.lims-table tbody tr:hover { background: color-mix(in srgb, var(--lims-accent) 7%, transparent); }
+.lims-empty { text-align: center; color: var(--lims-muted); padding: 22px; }
+
+.mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-weight: 700; color: var(--lims-accent2); }
+
+/* Статус-чипы */
+.chip { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; white-space: nowrap; }
+.chip-new,     .chip-draft   { background: rgba(56,189,248,0.16); color: #0ea5e9; }
+.chip-in_progress { background: rgba(245,158,11,0.16); color: #d97706; }
+.chip-tested,  .chip-done,  .chip-approved { background: rgba(16,185,129,0.16); color: #059669; }
+.chip-reject { background: rgba(244,63,94,0.16); color: #e11d48; }
+.chip-utilized, .chip-pending { background: rgba(148,163,184,0.18); color: #64748b; }
+html.dark-theme .chip-new, html.dark-theme .chip-draft { color: #7dd3fc; }
+html.dark-theme .chip-in_progress { color: #fbbf24; }
+html.dark-theme .chip-tested, html.dark-theme .chip-done, html.dark-theme .chip-approved { color: #6ee7b7; }
+html.dark-theme .chip-reject { color: #fda4af; }
+html.dark-theme .chip-utilized, html.dark-theme .chip-pending { color: #cbd5e1; }
+
+/* Иконочные кнопки в строках таблицы */
+.lims-iconbtn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border: 1px solid var(--lims-line); border-radius: 8px;
+  cursor: pointer; background: var(--lims-card2); color: var(--lims-muted); margin-left: 4px;
+  transition: all 0.15s;
+}
+.lims-iconbtn:hover { color: var(--lims-accent2); border-color: var(--lims-accent2); }
+.lims-iconbtn.danger:hover { color: #f43f5e; border-color: #f43f5e; }
+.lims-iconbtn .material-icons { font-size: 18px; }
+
+/* Основная кнопка действия */
+.lims-btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 16px;
+  border: none; border-radius: 10px; cursor: pointer; font-weight: 700; font-size: 0.85rem;
+  background: linear-gradient(180deg, var(--lims-accent2), var(--lims-accent));
+  color: #04121f; box-shadow: 0 8px 20px -10px var(--lims-accent2);
+}
+.lims-btn:hover { filter: brightness(1.07); }
+.lims-btn .material-icons { font-size: 19px; }
+.lims-btn.ghost { background: var(--lims-card2); color: var(--lims-text); border: 1px solid var(--lims-line); box-shadow: none; }
+.lims-btn.ghost:hover { border-color: var(--lims-accent2); }
+
+.lims-count { color: var(--lims-muted); font-size: 0.8rem; margin: 2px 2px 8px; }
